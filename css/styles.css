@@ -1,0 +1,111 @@
+body {
+  margin: 40px;
+  background-image: url(../assets/main_background.jpg);
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+  background-position: center; /* Centers the background image */
+  font-family: "Rubik", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.footer {
+  background-color: rgba(245, 209, 176, 0.8117647059);
+  height: 40px;
+  border-bottom-left-radius: 10px;
+}
+
+.header {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  margin: 0; /* Keeps margin at 0 to avoid default browser margins */
+  text-align: center;
+  padding: 20px;
+}
+
+.line {
+  border: none; /* Remove default border */
+  border-top: 2px solid #000; /* Set the top border to create the line */
+  width: 100%; /* Ensure the line spans the full width of the parent div */
+  margin: 20px 0; /* Add vertical margin if needed */
+}
+
+.flex-container {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+  color: white;
+}
+
+div a {
+  text-shadow: 2px 2px 5px orange; /* Corrected text-shadow */
+}
+
+.navbar a {
+  padding: 10px;
+  font-size: small;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  border-radius: 100px;
+}
+
+.side {
+  background-color: rgba(245, 209, 176, 0.8117647059);
+  padding: 25px;
+  border-top-left-radius: 10px;
+}
+
+.side h3 {
+  margin: 20px, 20px;
+  margin: 0;
+}
+
+.side p {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-weight: 100;
+}
+
+.main {
+  flex: 90%;
+  max-width: 90%;
+  background-color: rgba(255, 255, 255, 0.909);
+  border-top-right-radius: 10px;
+}
+
+.wrap-image, .main p, .main h1, hr {
+  margin: 25px;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.wrap-image {
+  float: right; /* Ensures the image floats to the left */
+  width: 200px; /* Set the desired width */
+  height: auto; /* Ensures the image maintains its aspect ratio */
+  padding: 0;
+}
