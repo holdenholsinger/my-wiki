@@ -36,7 +36,6 @@ img {
   border: none; /* Remove default border */
   border-top: 2px solid #000; /* Set the top border to create the line */
   width: 100%; /* Ensure the line spans the full width of the parent div */
-  margin: 20px 0; /* Add vertical margin if needed */
 }
 
 .flex-container {
@@ -94,8 +93,17 @@ div a {
   border-top-right-radius: 10px;
 }
 
-.wrap-image, .main p, .main h1, hr {
+.main h1 {
+  border-top: black;
+}
+
+.wrap-image, .main p, .main h1, .line {
   margin: 25px;
+}
+
+.line {
+  border-top: 2px solid darkgray; /* Create the line using the top border */
+  width: auto;
 }
 
 img {
