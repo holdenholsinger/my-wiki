@@ -109,3 +109,7 @@ img {
   height: auto; /* Ensures the image maintains its aspect ratio */
   padding: 0;
 }
+
+hr {
+  margin: auto;
+}
