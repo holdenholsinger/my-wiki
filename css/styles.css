@@ -118,6 +118,24 @@ img {
   padding: 0;
 }
 
+h3 {
+  position: relative;
+  margin-left: 40px;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  background-image: url(../assets/sprites.png);
+  background-position: -1px -151px;
+  width: 15px;
+  height: 18px;
+  background-size: auto;
+  transform: translate(-50%, -50%) scale(0.3);
+}
+
 hr {
   margin: auto;
 }

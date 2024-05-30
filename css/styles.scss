@@ -5,26 +5,26 @@ body {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the background image fixed when scrolling */
   background-position: center; /* Centers the background image */
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  }
+}
 
 img {
   height: 50px;
-  width: 50px; 
+  width: 50px;
 }
 
 .footer {
-  background-color: #f5d1b0cf;
+  background-color: rgba(245, 209, 176, 0.8117647059);
   height: 40px;
   border-bottom-left-radius: 10px;
 }
 
 .header {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: white;
   text-shadow: 2px 2px 5px black;
   margin: 0; /* Keeps margin at 0 to avoid default browser margins */
@@ -48,8 +48,6 @@ img {
   color: white;
 }
 
-
-
 div a {
   text-shadow: 2px 2px 5px orange; /* Corrected text-shadow */
 }
@@ -66,15 +64,15 @@ div a {
 
 .row {
   display: flex;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   border-radius: 100px;
 }
 
 .side {
-  background-color: #f5d1b0cf;
+  background-color: rgba(245, 209, 176, 0.8117647059);
   padding: 25px;
   border-top-left-radius: 10px;
-  }
+}
 
 .side h3 {
   margin: 20px, 20px;
@@ -96,7 +94,7 @@ div a {
 }
 
 .main h1 {
-  border-top: black
+  border-top: black;
 }
 
 .wrap-image, .main p, .main h1, .line {
@@ -104,13 +102,13 @@ div a {
 }
 
 .line {
-   border-top: 2px solid darkgray; /* Create the line using the top border */
-   width: auto;
+  border-top: 2px solid darkgray; /* Create the line using the top border */
+  width: auto;
 }
 
 img {
   height: 50px;
-  width: 50px; 
+  width: 50px;
 }
 
 .wrap-image {
@@ -120,5 +118,24 @@ img {
   padding: 0;
 }
 
-hr {margin: auto;
+h3 {
+  position: relative;
+  margin-left: 40px;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  background-image: url(../assets/sprites.png);
+  background-position: -1px -151px;
+  width: 15px;
+  height: 18px;
+  background-size: auto;
+  transform: translate(-50%, -50%) scale(.3);
+}
+
+hr {
+  margin: auto;
 }
