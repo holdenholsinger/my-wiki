@@ -32,6 +32,10 @@ img {
   padding: 20px;
 }
 
+.quote {
+  padding-left: 25px;
+}
+
 .line {
   border: none; /* Remove default border */
   border-top: 2px solid #000; /* Set the top border to create the line */
@@ -95,6 +99,10 @@ div a {
 
 .main h1 {
   border-top: black;
+}
+
+.main p {
+  line-height: 2;
 }
 
 .wrap-image, .main p, .main h1, .line {
