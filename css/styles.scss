@@ -17,6 +17,161 @@ img {
   width: 50px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: rgba(245, 209, 176, 0.8117647059);
+  height: 40px;
+  border-bottom-left-radius: 10px;
+}
+
+.header {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  margin: 0; /* Keeps margin at 0 to avoid default browser margins */
+  text-align: center;
+  padding: 20px;
+}
+
+.quote {
+  padding-left: 25px;
+}
+
+.line {
+  border: none; /* Remove default border */
+  border-top: 2px solid #000; /* Set the top border to create the line */
+  width: 100%; /* Ensure the line spans the full width of the parent div */
+}
+
+.flex-container {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+  color: white;
+}
+
+div a {
+  text-shadow: 2px 2px 5px orange; /* Corrected text-shadow */
+}
+
+.navbar a {
+  padding: 10px;
+  font-size: small;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  border-radius: 100px;
+  flex-direction: row;
+}
+
+.side {
+  background-color: rgba(245, 209, 176, 0.8117647059);
+  padding: 25px;
+  border-top-left-radius: 10px;
+}
+
+.side h3 {
+  margin: 20px, 20px;
+  margin: 0;
+}
+
+.side p {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin: 0;
+  font-weight: 100;
+}
+
+.main {
+  flex: 90%;
+  background-color: rgba(255, 255, 255, 0.909);
+  border-top-right-radius: 10px;
+}
+
+.main h1 {
+  border-top: black;
+}
+
+.main p {
+  line-height: 2;
+}
+
+.wrap-image, .main p, .main h1, .line {
+  margin: 10px;
+}
+
+.line {
+  border-top: 2px solid darkgray; /* Create the line using the top border */
+  width: auto;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.wrap-image {
+  float: right; /* Ensures the image floats to the left */
+  width: 200px; /* Set the desired width */
+  height: auto; /* Ensures the image maintains its aspect ratio */
+  padding: 0;
+}
+
+h3 {
+  position: relative;
+  margin-left: 40px;
+}
+
+h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  background-image: url(../assets/sprites.png);
+  background-position: -1px -151px;
+  width: 15px;
+  height: 18px;
+  background-size: auto;
+  transform: translate(-50%, -50%) scale(.3);
+}
+
+hr {
+  margin: auto;
+}
+
+body {
+  margin: 40px;
+  background-image: url(../assets/main_background.jpg);
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+  background-position: center; /* Centers the background image */
+  font-family: "Rubik", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
 .footer {
   background-color: rgba(245, 209, 176, 0.8117647059);
   height: 40px;
@@ -76,6 +231,7 @@ div a {
   background-color: rgba(245, 209, 176, 0.8117647059);
   padding: 25px;
   border-top-left-radius: 10px;
+  max-width: 100%;
 }
 
 .side h3 {
@@ -92,7 +248,7 @@ div a {
 
 .main {
   flex: 90%;
-  max-width: 90%;
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.909);
   border-top-right-radius: 10px;
 }
@@ -124,6 +280,7 @@ img {
   width: 200px; /* Set the desired width */
   height: auto; /* Ensures the image maintains its aspect ratio */
   padding: 0;
+  margin-left: 10px;
 }
 
 h3 {
@@ -146,4 +303,59 @@ h3::before {
 
 hr {
   margin: auto;
+}
+
+// Media query
+@media (max-width: 600px) {
+  @media (max-width: 600px) {
+    * {border-radius: 0%;}
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center children horizontally */
+      padding: 20px;
+    }
+
+    .line {
+      width: 100%;
+      max-width: calc(100% - 50px); /* Adjust padding here */
+      margin: 20px; /* Center horizontally */
+    }
+
+    .content div {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+    }
+
+    .navbar, .side {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main img {
+      display: none;
+    }
+  
+    .navbar, .main, .side {
+      width: 100%; /* Set width to 100% to ensure both stack and have the same width */
+      border-radius: 0%;
+    }
+    
+    .line {
+      margin-right: 100px;
+      margin-right: 20px;
+    }
+  
+    .navbar {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center; /* Align items vertically within each grid cell */
+      justify-content: center;
+      column-gap: 10px;
+      transform: scale(1.15);
+    }
+  }
+
+
 }
