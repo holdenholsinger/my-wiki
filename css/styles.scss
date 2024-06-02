@@ -1,12 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 40px;
   background-image: url(../assets/main_background.jpg);
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Keeps the background image fixed when scrolling */
   background-position: center; /* Centers the background image */
   font-family: "Rubik", sans-serif;
-  flex-direction: column;
+  margin: 40px;
 }
 
 * {
@@ -21,13 +24,13 @@ img {
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .header {
   font-family: "Rubik", sans-serif;
   color: white;
   text-shadow: 2px 2px 5px black;
-  margin: 0; /* Keeps margin at 0 to avoid default browser margins */
   text-align: center;
   padding: 20px;
 }
@@ -50,6 +53,7 @@ img {
   display: flex;
   justify-content: left;
   color: white;
+  margin-top: 20px;
 }
 
 .navbar a {
@@ -74,18 +78,16 @@ img {
   background-color: rgba(245, 209, 176, 0.8117647059);
   padding: 25px;
   border-top-left-radius: 10px;
+  max-width: 100%;
 }
 
-.side h3 {
-  margin: 20px, 20px;
-  margin: 0;
+.facts {
+  align-items: center;
+  margin-bottom: .5em;
 }
 
-.side p {
-  padding-top: 5px;
-  padding-bottom: 20px;
-  margin: 0;
-  font-weight: 100;
+.facts p {
+  margin-top: .25em;
 }
 
 .main {
@@ -150,19 +152,6 @@ hr {
   margin: auto;
 }
 
-body {
-  margin: 40px;
-  background-image: url(../assets/main_background.jpg);
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Keeps the background image fixed when scrolling */
-  background-position: center; /* Centers the background image */
-  font-family: "Rubik", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 img {
   height: 50px;
@@ -170,13 +159,14 @@ img {
 }
 
 .footer {
-  display: flex;
+  display: block;
   background-color: rgba(245, 209, 176, 0.8117647059);
-  height: auto;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  width: 100%;
+  // height: auto;
+  // flex-direction: row;
+  text-align: center;
+  // justify-content: center;
+  // padding: 10px;
 }
 
 .header {
@@ -205,6 +195,7 @@ img {
 .navbar {
   display: flex;
   justify-content: left;
+  align-items: center;
   color: white;
 }
 
@@ -219,29 +210,29 @@ img {
   cursor: pointer;
 }
 
+.navbar input {
+  margin-left: auto; /* Pushes the search bar to the right */
+  padding: 10px;
+  font-size: small;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar input::placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
 .row {
   display: flex;
   font-family: "Rubik", sans-serif;
   border-radius: 100px;
 }
 
-.side {
-  background-color: rgba(245, 209, 176, 0.8117647059);
-  padding: 25px;
-  border-top-left-radius: 10px;
-  max-width: 100%;
-}
+
 
 .side h3 {
   margin: 20px, 20px;
   margin: 0;
-}
-
-.side p {
-  padding-top: 5px;
-  padding-bottom: 20px;
-  margin: 0;
-  font-weight: 100;
 }
 
 .main {
@@ -304,8 +295,15 @@ hr {
 }
 
 // Media query
-  @media (max-width: 600px) {
-    * {border-radius: 0%;}
+  @media (max-width: 741px) {
+    * {
+      border-radius: 0%;
+
+    }
+
+    body {
+      margin: 20px;
+    }
     .main {
       display: flex;
       flex-direction: column;
@@ -322,20 +320,12 @@ hr {
     .content div {
       display: flex;
       flex-direction: column;
-      margin-right: 0;
     }
 
     .navbar, .side {
       justify-content: center;
       align-items: center;
     }
-
-    .side {
-      display: flex;
-      flex-direction: row;
-      align-items: left;
-    }
-
     .main img {
       display: none;
     }
@@ -345,18 +335,24 @@ hr {
       border-radius: 0%;
     }
     
-    .line {
-      margin-right: 100px;
-      margin-right: 20px;
-    }
-  
     .navbar {
-      display: grid;
-      grid-template-columns: auto auto;
-      align-items: center; /* Align items vertically within each grid cell */
-      justify-content: center;
-      column-gap: 10px;
       transform: scale(1.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .side p {
+      margin: auto;
+    }
+
+    .navbar input {
+      margin: auto; /* Pushes the search bar to the right */
+      padding: 10px;
+      font-size: small;
+      border: none;
+      border-radius: 5px;
+      // order: -1;
     }
 
     .footer {
@@ -369,7 +365,10 @@ hr {
       align-items: center;
     }
 
-    
+    .facts {
+      display: flex;
+      align-items: center;
+      flex-direction: row !important;
+      gap: 10px;
+    }
   }
-
-
