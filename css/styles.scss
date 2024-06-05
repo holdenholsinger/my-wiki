@@ -9,7 +9,7 @@ body {
   background-attachment: fixed; /* Keeps the background image fixed when scrolling */
   background-position: center; /* Centers the background image */
   font-family: "Rubik", sans-serif;
-  margin: 40px;
+  // margin: 40px;
 }
 
 #body-index {
@@ -338,16 +338,12 @@ hr {
       border-radius: 0%;
 
     }
-
     body {
-      margin: 20px;
+      margin: 0 !important;
     }
-    .main {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center children horizontally */
-      padding: 20px;
-    }
+    // #body-index {
+    //   margin: 0;
+    // }
 
     .line {
       width: 100%;
@@ -355,9 +351,16 @@ hr {
       margin: 20px; /* Center horizontally */
     }
 
+    .content {
+      margin: 0;
+      align-items: center;
+      width: 100%;
+    }
     .content div {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .side {
@@ -376,9 +379,9 @@ hr {
     .navbar-container {
       display: flex;  
       width: 100%;
-      margin:auto;
-      align-items: center;
-      justify-content: center;
+      margin:0;
+      align-items: left;
+      justify-content: left;
     }
 
     .navbar {
@@ -386,11 +389,11 @@ hr {
       display: flex;
       flex-direction: column;
       background-color: rgba(255, 255, 255, 0.909);  
-      margin:auto;
+      margin:0;
       padding: 10px;
       width: 100%;
       align-items: center;
-      justify-content: center;
+      justify-content: left;
     }
 
     .side p {
@@ -411,6 +414,12 @@ hr {
       background-color: transparent;
       padding: 10px;
       color: black;
+      display: flex;
+
+    .navbar #home-button {
+      display: block;
+    }
+
       
     }
     .footer {
@@ -419,7 +428,6 @@ hr {
     }
 
     .footer p {
-      margin: 25px;
       align-items: center;
     }
 
