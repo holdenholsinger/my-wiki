@@ -70,15 +70,16 @@ a {
   width: 100%; /* Ensure the line spans the full width of the parent div */
 }
 
-.flex-container {
-  display: flex;
-}
 
 .navbar {
   display: flex;
-  justify-content: left;
-  color: darkgray !important;
-  margin-top: 20px;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  width: 100%; /* Ensure it spans the full width */
+  background-color: rgba(255, 255, 255, 0.909); /* White background with some transparency */
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .navbar a {
@@ -86,7 +87,7 @@ a {
   font-size: small;
   color: black;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.909);
+  
 }
 
 .navbar a:hover {
@@ -220,12 +221,6 @@ img {
   display: flex;
 }
 
-.navbar {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  color: white;
-}
 
 .navbar a {
   // text-shadow: 2px 2px 5px orange; /* Corrected text-shadow */
@@ -244,21 +239,21 @@ img {
 }
 
 
-.navbar a:nth-last-child(2) {
+.navbar a:last-child {
   border-radius: 0px 5px 5px 0px;
 }
 
-.navbar input {
-  margin-left: auto; /* Pushes the search bar to the right */
-  padding: 10px;
-  font-size: small;
-  border: none;
-  border-radius: 5px;
-}
+// .navbar input {
+//   margin-left: auto; /* Pushes the search bar to the right */
+//   padding: 10px;
+//   font-size: small;
+//   border: none;
+//   border-radius: 5px;
+// }
 
-.navbar input::placeholder {
-  font-family: "Rubik", sans-serif;
-}
+// .navbar input::placeholder {
+//   font-family: "Rubik", sans-serif;
+// }
 
 .row {
   display: flex;
@@ -375,14 +370,6 @@ hr {
       width: 100%; /* Set width to 100% to ensure both stack and have the same width */
       border-radius: 0%;
     }
-    
-    .navbar-container {
-      display: flex;  
-      width: 100%;
-      margin:0;
-      align-items: left;
-      justify-content: left;
-    }
 
     .navbar {
       transform: scale(1.15);
@@ -400,15 +387,15 @@ hr {
       margin: auto;
     }
 
-    .navbar input {
-      margin: auto; /* Pushes the search bar to the right */
-      padding: 10px;
-      font-size: small;
-      border: none;
-      border-radius: 5px;
-      border: 2px solid black;
+    // .navbar input {
+    //   margin: auto; /* Pushes the search bar to the right */
+    //   padding: 10px;
+    //   font-size: small;
+    //   border: none;
+    //   border-radius: 5px;
+    //   border: 2px solid black;
       
-    }
+    // }
 
     .navbar a {
       background-color: transparent;
