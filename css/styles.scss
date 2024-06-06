@@ -9,7 +9,6 @@ body {
   background-attachment: fixed; /* Keeps the background image fixed when scrolling */
   background-position: center; /* Centers the background image */
   font-family: "Rubik", sans-serif;
-  // margin: 40px;
 }
 
 #body-index {
@@ -70,7 +69,6 @@ a {
   width: 100%; /* Ensure the line spans the full width of the parent div */
 }
 
-
 .navbar {
   display: flex;
   justify-content: flex-start; /* Align items to the left */
@@ -87,13 +85,18 @@ a {
   font-size: small;
   color: black;
   text-decoration: none;
-  
 }
 
 .navbar a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.navbar #hamburger {
+  display: none;
+}
+
+
 
 .row {
   display: flex;
@@ -111,11 +114,11 @@ a {
 
 .facts {
   align-items: center;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .facts p {
-  margin-top: .25em;
+  margin-top: 0.25em;
 }
 
 .main {
@@ -174,13 +177,12 @@ h3::before {
   width: 15px;
   height: 18px;
   background-size: auto;
-  transform: translate(-50%, -50%) scale(.3);
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 hr {
   margin: auto;
 }
-
 
 img {
   height: 50px;
@@ -191,11 +193,7 @@ img {
   display: block;
   background-color: rgba(245, 209, 176, 0.8117647059);
   width: 100%;
-  // height: auto;
-  // flex-direction: row;
   text-align: center;
-  // justify-content: center;
-  // padding: 10px;
 }
 
 .header {
@@ -221,12 +219,9 @@ img {
   display: flex;
 }
 
-
 .navbar a {
-  // text-shadow: 2px 2px 5px orange; /* Corrected text-shadow */
   padding: 10px;
   font-size: small;
-
 }
 
 .navbar a:hover, .main a:hover {
@@ -238,30 +233,15 @@ img {
   border-radius: 5px 0px 0px 5px;
 }
 
-
 .navbar a:last-child {
   border-radius: 0px 5px 5px 0px;
 }
-
-// .navbar input {
-//   margin-left: auto; /* Pushes the search bar to the right */
-//   padding: 10px;
-//   font-size: small;
-//   border: none;
-//   border-radius: 5px;
-// }
-
-// .navbar input::placeholder {
-//   font-family: "Rubik", sans-serif;
-// }
 
 .row {
   display: flex;
   font-family: "Rubik", sans-serif;
   border-radius: 100px;
 }
-
-
 
 .side h3 {
   margin: 20px, 20px;
@@ -320,108 +300,97 @@ h3::before {
   width: 15px;
   height: 18px;
   background-size: auto;
-  transform: translate(-50%, -50%) scale(.3);
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 hr {
   margin: auto;
 }
 
-// Media query
-  @media (max-width: 741px) {
-    * {
-      border-radius: 0%;
-
-    }
-    body {
-      margin: 0 !important;
-    }
-    // #body-index {
-    //   margin: 0;
-    // }
-
-    .line {
-      width: 100%;
-      max-width: calc(100% - 50px); /* Adjust padding here */
-      margin: 20px; /* Center horizontally */
-    }
-
-    .content {
-      margin: 0;
-      align-items: center;
-      width: 100%;
-    }
-    .content div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .side {
-      justify-content: center;
-      align-items: center;
-    }
-    .main img {
-      display: none;
-    }
-  
-    .main, .side {
-      width: 100%; /* Set width to 100% to ensure both stack and have the same width */
-      border-radius: 0%;
-    }
-
-    .navbar {
-      transform: scale(1.15);
-      display: flex;
-      flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.909);  
-      margin:0;
-      padding: 10px;
-      width: 100%;
-      align-items: center;
-      justify-content: left;
-    }
-
-    .side p {
-      margin: auto;
-    }
-
-    // .navbar input {
-    //   margin: auto; /* Pushes the search bar to the right */
-    //   padding: 10px;
-    //   font-size: small;
-    //   border: none;
-    //   border-radius: 5px;
-    //   border: 2px solid black;
-      
-    // }
-
-    .navbar a {
-      background-color: transparent;
-      padding: 10px;
-      color: black;
-      display: flex;
-
-    .navbar #home-button {
-      display: block;
-    }
-
-      
-    }
-    .footer {
-      display: flex;
-      flex-direction: row !important;
-    }
-
-    .footer p {
-      align-items: center;
-    }
-
-    .facts {
-      display: flex;
-      align-items: center;
-      flex-direction: row !important;
-      gap: 10px;
-    }
+@media (max-width: 741px) {
+  * {
+    border-radius: 0%;
   }
+  body {
+    margin: 0 !important;
+  }
+  .line {
+    width: 100%;
+    max-width: calc(100% - 50px); /* Adjust padding here */
+    margin: 20px; /* Center horizontally */
+  }
+  .content {
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+  .content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .side {
+    justify-content: center;
+    align-items: center;
+  }
+  .main img {
+    display: none;
+  }
+  .main, .side {
+    width: 100%; /* Set width to 100% to ensure both stack and have the same width */
+    border-radius: 0%;
+  }
+  .navbar {
+    transform: scale(1.15);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.909);
+    margin: 0;
+    padding: 10px;
+    padding-top: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+  }
+  #hamburger {
+    display: block !important;
+    position: absolute;
+    right: 10%;
+    top: 20px;
+  }
+
+  .navbar a:not(#home-button):not(#hamburger) {
+    display: none;
+  }
+  
+  /* Class to show elements when the hamburger is clicked */
+  .navbar.show a {
+    display: block !important;
+  }
+
+
+  .side p {
+    margin: auto;
+  }
+  .navbar a {
+    background-color: transparent;
+    padding: 10px;
+    color: black;
+    display: flex;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .footer p {
+    align-items: center;
+  }
+  .facts {
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    gap: 10px;
+  }
+}
