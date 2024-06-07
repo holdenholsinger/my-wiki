@@ -74,7 +74,7 @@ a {
   justify-content: flex-start; /* Align items to the left */
   align-items: center;
   width: 100%; /* Ensure it spans the full width */
-  background-color: rgba(255, 255, 255, 0.909); /* White background with some transparency */
+  background-color: rgb(255, 255, 255); 
   padding: 5px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -95,8 +95,6 @@ a {
 .navbar #hamburger {
   display: none;
 }
-
-
 
 .row {
   display: flex;
@@ -219,7 +217,7 @@ img {
   display: flex;
 }
 
-.navbar a {
+.navbar a, .navbar div {
   padding: 10px;
   font-size: small;
 }
@@ -342,44 +340,49 @@ hr {
     border-radius: 0%;
   }
   .navbar {
-    transform: scale(1.15);
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.909);
     margin: 0;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 0 !important;
     width: 100%;
     align-items: center;
     justify-content: left;
+    border-radius: 0;
+    position: fixed !important;
+    z-index: 4;
   }
   #hamburger {
     display: block !important;
     position: absolute;
     right: 10%;
-    top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    height: 1em;
+    transform: scale(1.5);
   }
+  #hamburger p{
+    margin: 0;
+    padding: 1px !important;
+    line-height: .5px;
+    transform: scalex(2);
+    height: 100%;
+  }
+
 
   .navbar a:not(#home-button):not(#hamburger) {
     display: none;
   }
-  
-  /* Class to show elements when the hamburger is clicked */
-  .navbar.show a {
-    display: block !important;
+  .navbar a.show {
+    display: flex !important;
   }
-
-
   .side p {
     margin: auto;
   }
   .navbar a {
     background-color: transparent;
-    padding: 10px;
     color: black;
     display: flex;
   }
-
   .footer {
     display: flex;
     flex-direction: row !important;
