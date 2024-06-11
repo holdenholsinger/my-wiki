@@ -288,9 +288,13 @@ img {
 .wrap-image {
   float: right; /* Ensures the image floats to the left */
   width: 200px; /* Set the desired width */
-  height: auto; /* Ensures the image maintains its aspect ratio */
+  height: 200px; /* Ensures the image maintains its aspect ratio */
   padding: 0;
   margin-left: 10px;
+  margin-top: 0.5em !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
 }
 
 h3 {
