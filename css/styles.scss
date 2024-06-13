@@ -41,6 +41,16 @@ body {
   margin: 40px;
 }
 
+#body-locations {
+  background-image: url(/assets/exposition.jpg);
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+  background-position: center; /* Centers the background image */
+  font-family: "Rubik", sans-serif;
+  margin: 40px;
+}
+
 * {
   box-sizing: border-box;
 }
